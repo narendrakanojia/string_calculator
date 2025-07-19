@@ -11,6 +11,16 @@ class StringCalculator
 			return number_array[0].to_i if number_array.count == 1
 			
 		end
-		number_array.sum(&:to_i)
+		str_to_num = number_array.map {|aa| aa.to_i}
+		negative_num = str_to_num.select { |n| n < 0 }
+
+		if negative_num.any?
+    	  puts "negative numbers not allowed #{negative_num.join(',')}"
+    	end
+
+    	str_to_num.sum
 	end
 end
+
+
+puts StringCalculator.add("4,-1,5")
