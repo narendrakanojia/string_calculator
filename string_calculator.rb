@@ -23,4 +23,9 @@ class StringCalculator
 end
 
 
+puts StringCalculator.add("")
+puts StringCalculator.add("1")
+puts StringCalculator.add("1,5")
+puts StringCalculator.add("1\n2,3")
+puts puts StringCalculator.add("//;\n1;2")
 puts StringCalculator.add("4,-1,5")
